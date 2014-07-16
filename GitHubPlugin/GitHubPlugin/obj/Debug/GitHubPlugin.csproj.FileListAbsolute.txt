@@ -1,8 +1,1 @@
-c:\users\michael whitehead\documents\visual studio 2013\Projects\GitHubPlugin\GitHubPlugin\bin\Debug\GitHubPlugin.exe.config
-C:\Users\colto_000\Documents\GitHubPluginProj\Proj\GitHubPlugin\GitHubPlugin\bin\Debug\GitHubPlugin.exe.config
-C:\Users\colto_000\Documents\GitHubPluginProj\Proj\GitHubPlugin\GitHubPlugin\obj\Debug\GitHubPlugin.csprojResolveAssemblyReference.cache
-C:\Users\colto_000\Documents\GitHubPluginProj\Proj\GitHubPlugin\GitHubPlugin\bin\Debug\GitHubPlugin.exe
-C:\Users\colto_000\Documents\GitHubPluginProj\Proj\GitHubPlugin\GitHubPlugin\bin\Debug\GitHubPlugin.pdb
-C:\Users\colto_000\Documents\GitHubPluginProj\Proj\GitHubPlugin\GitHubPlugin\bin\Debug\LibGit2Sharp.dll
-C:\Users\colto_000\Documents\GitHubPluginProj\Proj\GitHubPlugin\GitHubPlugin\obj\Debug\GitHubPlugin.exe
-C:\Users\colto_000\Documents\GitHubPluginProj\Proj\GitHubPlugin\GitHubPlugin\obj\Debug\GitHubPlugin.pdb
+C:\Users\Michael Whitehead\Documents\Visual Studio 2013\Projects\LabviewGitPlugin_Hackathon\GitHubPlugin\GitHubPlugin\bin\Debug\GitHubPlugin.exe.config

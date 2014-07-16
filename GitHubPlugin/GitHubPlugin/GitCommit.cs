@@ -18,6 +18,12 @@ namespace GitHubPlugin
             this.author = new Signature(author, handle, DateTime.Now);
         }
 
+        /// <summary>
+        /// Commit list of files
+        /// </summary>
+        /// <param name="files">Relative file paths to file from the repo head</param>
+        /// <param name="comMsg">Commit message</param>
+        /// <returns>string if error, else null</returns>
         public string commitFiles(List<string> files, string comMsg)
         {
             foreach (string s in files)
@@ -27,6 +33,7 @@ namespace GitHubPlugin
             try
             {
                 Commit commit = repo.Commit(comMsg, author, author);
+                
             }
             catch (Exception e)
             {
