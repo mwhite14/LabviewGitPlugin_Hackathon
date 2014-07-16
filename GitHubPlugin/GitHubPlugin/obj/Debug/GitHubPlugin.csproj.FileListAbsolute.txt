@@ -1,0 +1,1 @@
+c:\users\michael whitehead\documents\visual studio 2013\Projects\GitHubPlugin\GitHubPlugin\bin\Debug\GitHubPlugin.exe.config
