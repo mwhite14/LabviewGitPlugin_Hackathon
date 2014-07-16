@@ -48,6 +48,7 @@
     <Compile Include="GitCommit.cs" />
     <Compile Include="GitCommitLogs.cs" />
     <Compile Include="GitInit.cs" />
+    <Compile Include="GitPull.cs" />
     <Compile Include="GitPush.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
