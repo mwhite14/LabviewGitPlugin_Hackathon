@@ -24,7 +24,7 @@ namespace GitHubPlugin
         /// <param name="username">Git username</param>
         /// <param name="pw">Git pw</param>
         /// <returns>string if error, else null</returns>
-        public string push(string username, string pw)
+        public string push(string repoPath, string remotePath, string username, string pw)
         {
             PushOptions pushOps = new PushOptions();
             UsernamePasswordCredentials creds = new UsernamePasswordCredentials();
@@ -32,8 +32,14 @@ namespace GitHubPlugin
             creds.Password = pw;
             pushOps.Credentials = creds;
 
+            var remote = repo.Network.Remotes["upstream"];
+            if(remote == null)
+            {
+                repo.Network.Remotes.Add("upstream", remotePath);
+                remote = repo.Network.Remotes["upstream"];
+            }
 
-            try { repo.Network.Push(repo.Network.Remotes["origin"], "HEAD", "refs/heads/master", pushOps, new Signature("Colton", "That.that.net", DateTime.Now), "This is a test"); }
+            try { repo.Network.Push(repo.Network.Remotes["remotes"], "HEAD", "refs/heads/master", pushOps); }
             catch (Exception e) { return "Message: " + e.Message + " Cause: " + e.InnerException + " Error#: " + e.HResult; }
             return null;
         }

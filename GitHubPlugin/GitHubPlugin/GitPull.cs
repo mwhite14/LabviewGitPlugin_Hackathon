@@ -19,7 +19,7 @@ namespace GitHubPlugin
             repo = new Repository(localRepoPath);
         }
 
-        public string PullChanges()
+        public string PullChanges(string username, string password, string repoPath, string remotePath)
         {
             PullOptions pullOps = new PullOptions();
 
@@ -27,8 +27,8 @@ namespace GitHubPlugin
             MergeOptions mergeOps = new MergeOptions();
 
             UsernamePasswordCredentials creds = new UsernamePasswordCredentials();
-            creds.Username = "coltonhurt@live.com";
-            creds.Password = "hehe";
+            creds.Username = username;
+            creds.Password = password;
 
             fetchOps.Credentials = creds;
 
@@ -36,11 +36,18 @@ namespace GitHubPlugin
             pullOps.FetchOptions = fetchOps;
             pullOps.MergeOptions = mergeOps;
 
+            var remote = repo.Network.Remotes["upstream"];
+            if (remote == null)
+            {
+                repo.Network.Remotes.Add("upstream", remotePath);
+                remote = repo.Network.Remotes["upstream"];
+            }
+
             try
             {
-                repo.Network.Fetch(repo.Network.Remotes["origin"], fetchOps, new Signature("colon", "email", DateTime.Now), "Fetched crap");
+                repo.Network.Fetch(repo.Network.Remotes["upstream"], fetchOps);
 
-                MergeResult results = repo.Network.Pull(new Signature("colon", "email", DateTime.Now), pullOps);
+                MergeResult results = repo.Network.Pull(new Signature("","",DateTime.Now),pullOps);
                 Console.WriteLine(results.Status.ToString());
             }
             catch (Exception e)
