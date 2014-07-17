@@ -28,7 +28,7 @@ namespace GitHubPlugin
 
             UsernamePasswordCredentials creds = new UsernamePasswordCredentials();
             creds.Username = "coltonhurt@live.com";
-            creds.Password = "Irithos11!";
+            creds.Password = "hehe";
 
             fetchOps.Credentials = creds;
 
