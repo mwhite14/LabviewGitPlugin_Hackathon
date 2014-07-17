@@ -7,7 +7,7 @@ using LibGit2Sharp;
 
 namespace GitHubPlugin
 {
-    class GitInit
+    public class GitInit
     {
         private string _relativeFilePath;
 

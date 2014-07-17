@@ -8,7 +8,7 @@ using LibGit2Sharp;
 
 namespace GitHubPlugin
 {
-    class GitPush
+    public class GitPush
     {
         private Repository repo;
         private Remote remote;
@@ -18,17 +18,18 @@ namespace GitHubPlugin
             repo = new Repository(localRepoPath);
             remote = repo.Network.Remotes["origin"];
         }
-
         /// <summary>
         /// pushes current repo
         /// </summary>
+        /// <param name="username">Git username</param>
+        /// <param name="pw">Git pw</param>
         /// <returns>string if error, else null</returns>
-        public string push()
+        public string push(string username, string pw)
         {
             PushOptions pushOps = new PushOptions();
             UsernamePasswordCredentials creds = new UsernamePasswordCredentials();
-            creds.Username = "";
-            creds.Password = "";
+            creds.Username = username;
+            creds.Password = pw;
             pushOps.Credentials = creds;
 
 

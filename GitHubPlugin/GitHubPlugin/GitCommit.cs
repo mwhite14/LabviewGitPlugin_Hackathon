@@ -7,7 +7,7 @@ using LibGit2Sharp;
 
 namespace GitHubPlugin
 {
-    class GitCommit
+    public class GitCommit
     {        
         private Repository repo;
         private Signature author;

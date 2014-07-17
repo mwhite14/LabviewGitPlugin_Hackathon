@@ -8,7 +8,7 @@ using System.Globalization;
 
 namespace GitHubPlugin
 {
-    class GitCommitLogs
+    public class GitCommitLogs
     {
         private string _relativeRepoPath;
 

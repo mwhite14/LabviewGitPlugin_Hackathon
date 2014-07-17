@@ -7,7 +7,7 @@ using LibGit2Sharp;
 
 namespace GitHubPlugin
 {
-    class GitPull
+    public class GitPull
     {
         private Repository repo;
 
